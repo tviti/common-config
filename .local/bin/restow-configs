@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+COMMON_CONFIG=${HOME}/common-config
+MACHINE_CONFIG=${HOME}/machine-config
+TARGET=${HOME}
+
+start=${PWD}
+cd ${COMMON_CONFIG} && stow -R .
+cd ${MACHINE_CONFIG} && stow -R .
+cd ${start}
