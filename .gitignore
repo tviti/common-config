@@ -1,3 +1,4 @@
 *.~
 *.~undo-tree~
 *~
+/.agent-shell/

@@ -2,7 +2,7 @@ e() { emacsclient -nw "$@"; }
 
 proj() {
   local dir
-  dir=$(find ~/Source -maxdepth 3 -name ".git" -type d 2>/dev/null \
+  dir=$(find ~/Source -maxdepth 3 -name ".git" 2>/dev/null \
         | sed 's|/.git$||' \
         | fzf --preview 'ls {}')
   [ -n "$dir" ] && cd "$dir"
