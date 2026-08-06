@@ -83,7 +83,7 @@ Keep the epistemic register honest — the recipient will act on this, and false
 
 ## Finishing
 
-Default output path is `handoffs/YYYY-MM-DD-<short-slug>.md` under the project root; create the directory if needed. If the user named a path, use theirs.
+Default output path is `~/.claude-handoffs/<repo-name>/YYYY-MM-DD-<short-slug>.md` — a dedicated user-level directory, outside both the working repo and Claude Code's own managed state under `~/.claude/`. `<repo-name>` is the current repository's directory name (basename of the git root), which keeps handoffs from different projects from blending together in one flat listing. A handoff is transient working material for a later session or agent, not checked-in documentation, so it does not belong in the repo. Create the directory (and the `<repo-name>` subdirectory) if needed. If the user named a path, use theirs.
 
 Then print two things and stop:
 
