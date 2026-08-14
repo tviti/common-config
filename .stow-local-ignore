@@ -1,0 +1,30 @@
+# Adding this file replaces Stow's built-in default ignore list entirely,
+# so the entries below reproduce that default list before adding our own.
+# See: info stow -> Ignore Lists -> Types And Syntax Of Ignore Lists
+
+RCS
+.+,v
+
+CVS
+\.\#.+	  # CVS conflict files / emacs lock files
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+\.gitmodules
+
+.+~	  # emacs backup files
+\#.*\#	  # emacs autosave files
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# Repo-root CLAUDE.md documents this repo for Claude Code when working
+# *in* the repo. It must not be symlinked into $HOME, where it would be
+# picked up as project instructions for every unrelated session.
+^/CLAUDE\.md$
