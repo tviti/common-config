@@ -5,7 +5,13 @@ COMMON_CONFIG=${HOME}/common-config
 MACHINE_CONFIG=${HOME}/machine-config
 TARGET=${HOME}
 
+# --no-folding is required, not cosmetic. Without it stow "folds" a subtree
+# supplied by only one package into a single symlink (e.g. ~/.agents ->
+# common-config/.agents). The moment the other package adds anything under that
+# same subtree, its stow run sees the fold as a foreign symlink and aborts with
+# "existing target is not owned by stow". --no-folding materializes real
+# directories and links only leaf files, so both packages can contribute.
 start=${PWD}
-cd ${COMMON_CONFIG} && stow -R .
-cd ${MACHINE_CONFIG} && stow -R .
+cd ${COMMON_CONFIG} && stow -R --no-folding .
+cd ${MACHINE_CONFIG} && stow -R --no-folding .
 cd ${start}
