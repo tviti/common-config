@@ -32,7 +32,7 @@ The exception is a genuine hazard discovered in this session — "the test suite
 
 ## Structure
 
-Use this template. Drop any section that would be empty rather than writing "N/A" or "none identified". Add a section if this session produced something that doesn't fit.
+Use this template. Each section is a question a recipient might have, not a required field. Before filling one, check whether the question itself applies to this handoff, not just whether you can produce text for it — if answering honestly would mean inventing structure that wasn't there (dressing up "wasn't discussed" as "ruled out," or a stated preference as an evidenced claim), drop the section rather than manufacture an answer to occupy the slot. Add a section if this session produced something that doesn't fit.
 
 ```markdown
 # Handoff: <subject in a few words>
@@ -53,9 +53,11 @@ to the evidence. Distinguish "observed" from "confirmed by the user".>
 Mark confidence plainly: likely, plausible, guess.>
 
 ## Ruled out
-<Each candidate, why it was eliminated, and how firmly. This is often the most
-valuable section and the one most often omitted — it's what stops the recipient
-from re-running work this session already did.>
+<Each candidate, why it was eliminated, and how firmly. Valuable when something
+was actually eliminated with a reason — don't manufacture it from options that
+were simply never raised. This is often the most valuable section and the one
+most often omitted — it's what stops the recipient from re-running work this
+session already did.>
 
 ## Given
 <Constraints, preferences, and decisions the user stated. Treat as settled;
